@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philip Meng</title>
+  <meta name="description" content="portfolio site" />
+
+  <!-- IBM Plex Mono font setup + style.css setup -->
+  <!-- preconnect warms up the network connection before requesting the google font resource -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN (adds utility classes) -->
+  <!-- A CDN (Content Delivery Network) is used to  to quickly access and load the framework's CSS directly from a 
+  remote server, eliminating the need for local installation-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Existing stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white antialiased">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div>
+        <h1 class="title flex items-center gap-3">
+          Philip Meng
+        </h1>
+      </div>
+    </div>
+  </header>
+
+    <!-- Intro -->
+    <section class="section">
+      <div class="container">
+        <div class="text">
+          <p>Hey I’m Philip, a senior at 
+            <a href="https://www.andover.edu/" target="_blank" rel="noreferrer">Phillips Academy Andover.</a></p>
+          <p>I'm a builder and innovator that believes that technology can and should be used for social good.</p>
+          <p>
+            Reach me:
+            <a href="https://www.linkedin.com/in/philip-meng" target="_blank" rel="noreferrer">LinkedIn</a> ·
+              <!-- (hypertext reference) URL ^             | opens in new tab  |  do not send the HTTP Referer header to the destination for privacy-->
+            <a href="https://x.com/philipxmeng" target="_blank" rel="noreferrer">X</a> ·
+            <a href="https://github.com/philipmeng" target="_blank" rel="noreferrer">GitHub</a> ·
+            <a href="https://substack.com/@philipmeng" target="_blank" rel="noreferrer">Substack</a> ·
+            <a href="https://scholar.google.com/citations?user=mLUiy_EAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">projects_</h2>
+        <!-- unordered list, contains ordered list "li" as its direct children w/ individual items-->
+        <ul class="projects space-y-2 md:space-y-3">
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://andoverlaunchpad.org/"
+            target="_blank"
+            rel="noreferrer"
+            >Launchpad</a>
+            <div class="project__meta">Co-Founder & CEO of High School Startup Incubator w/ 37 chapters across 8 countries and 9 states.
+            </div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.theearlyfounder.com/"
+            target="_blank"
+            rel="noreferrer"
+            >The Early Founder</a>
+            <div class="project__meta">Founder & Host of Podcast to democratize entrepreneurial stories to people all around the world. 
+            Interviewed 20+ CEOs and wrote 123 founder profiles w/ 17.7M views, 14K followers, and 1.1M+ blog hits.
+            Guests include Ali Debow of Swsh, Ethan Hilton of Caseflood.ai, Roy Lee of Cluely, and more. </div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://ypaginator.com/store/p/thxyc"
+            target="_blank"
+            rel="noreferrer"
+            >Y Combinator 20th Anniversary Book</a>
+            <div class="project__meta">Worked with Eliam Medina (YC W15) to make an exclusive coffee-table book for YC founders.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">research_</h2>
+        <ul class="projects space-y-2 md:space-y-3">
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://aclanthology.org/2025.findings-emnlp.913/"
+            target="_blank"
+            rel="noreferrer"
+            >EnDive</a>
+            <div class="project__meta"> A benchmark for dialectal biases across English dialects 
+              for mainstream large language models like ChatGPT.
+              Published at: EMNLP 2025 Findings, ICLR BuildingTrust 2024 Workshop, NAACL 2024 SRW.
+            </div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://arxiv.org/abs/2408.14845"
+            target="_blank"
+            rel="noreferrer"
+            >AAVENUE</a>
+            <div class="project__meta">Precursor to EnDive, focusing on African American Vernacular English (AAVE) specifically. 
+              Published at: EMNLP 2024 NLP4PI Workshop & SoCal NLP Symposium 2024.</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <!-- There is no associated URL with ENLIVEN-1000 so I removed the underline and hover animations -->
+            <a
+            class="project__title"
+            >ENLIVEN-1000</a>
+            <div class="project__meta">A NLP revitalization framework for 1000+ endangered languages through language identification,
+              machine translation, and LLM-augmented synthetic data.
+              Submitted to: NeurIPS 2025 CLRLC-LLMs Workshop & AAAI 2026 LM4UC Workshop.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Personal Accomplishments -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">accomplishments_</h2>
+        <ul class="projects space-y-2 md:space-y-3">
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <!-- There is no associated URL with The Gen-Z Investor as well so I removed underline and hover animations -->
+            <a
+            class="project__title"
+            >The Gen-Z Investor</a>
+            <div class="project__meta">Worked alongside 645 Ventures Co-Founder Nnamdi Okike as a contributing author for a book
+              to help Gen-Z navigate harmful misinformation and gain financial independence through investing.</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://sccei.fsi.stanford.edu/reap"
+            target="_blank"
+            rel="noreferrer"
+            >Stanford Rural Education Action Program</a>
+            <div class="project__meta">Spent two summers researching caregiver practices for cognitively delayed babies in rural China.
+              Published 2 papers on improved family care indicators & daycare participation rates.
+              Created an AI app used by 5k daycare trainers weekly.
+            </div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://athletics.andover.edu/teams/bsqv"
+            target="_blank"
+            rel="noreferrer"
+            >Andover Varsity Squash Team</a>
+            <div class="project__meta">3x Awardee of the US Squash Scholar-Athlete Award.
+              Placed 13th at US Squash High School Nationals & 13th at Hong Kong Junior Squash Cup (U17 division).
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Awards -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">awards_</h2>
+        <ul class="projects space-y-2 md:space-y-3">
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.davidsongifted.org/gifted-programs/fellows-scholarship/fellows/current-and-past-fellows/2025-fellows/fellow-philip-meng-abhay-gupta/"
+            target="_blank"
+            rel="noreferrer"
+            >$25,000 Davidson Fellows Scholarship</a>
+            <div class="project__meta">Recognized by Forbes as "one of the nation’s most prestigious undergraduate scholarships.
+            </div>
+            <div class="project__meta">August 2025</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://ussenateyouth.org/"
+            target="_blank"
+            rel="noreferrer"
+            >US Senate Youth Program Finalist for MA</a>
+            <div class="project__meta">Potential paid week in Washington, DC, including meetings with Senators and the Vice President
+              + $10,000 merit-based academic scholarship.
+            </div>
+            <div class="project__meta">October 2025</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.coca-colascholarsfoundation.org/2026-semifinalists/"
+            target="_blank"
+            rel="noreferrer"
+            >2026 Coca-Cola Scholar Semifinalist</a>
+            <div class="project__meta">National merit-based scholarship awarded for outstanding leadership, community service, and 
+              academic excellence (~1.157% of 107K applicants).
+              Potential $20,000 scholarship and invitation to a paid summit in Atlanta.
+            </div>
+            <div class="project__meta">October 2025</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://blog.neurips.cc/2024/11/18/announcing-the-neurips-high-school-projects-results/"
+            target="_blank"
+            rel="noreferrer"
+            >NeurIPS 2024 High School Track Spotlight Award</a>
+            <div class="project__meta">Awarded to projects that effectively use machine learning for social impact and society.</div>
+            <div class="project__meta">November 2024</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://sdgs.un.org/tfm/STIForum2026"
+            target="_blank"
+            rel="noreferrer"
+            >Delegate to 2026 United Nations Forum on Science, Tech, Innovation for SDGs</a>
+            <div class="project__meta">October 2025</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://massachusettsdeca.org/"
+            target="_blank"
+            rel="noreferrer"
+            >DECA - Massachusetts State Champion</a>
+            <div class="project__meta">Developed and pitched a 20-page implementation plan for Launchpad.
+            </div>
+            <div class="project__meta">May 2024</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- Work -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-heading">work_</h2>
+        <ul class="projects space-y-2 md:space-y-3">
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://645ventures.com/"
+            target="_blank"
+            rel="noreferrer"
+            >645 Ventures</a>
+            <div class="project__meta"> Research & Deal Team Intern</div>
+            <div class="project__meta">June 2025 - Present</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.timhortons.com/"
+            target="_blank"
+            rel="noreferrer"
+            >Tim Horton’s</a>
+            <div class="project__meta">Business Development Intern</div>
+            <div class="project__meta">July - August 2023</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.animocabrands.com/"
+            target="_blank"
+            rel="noreferrer"
+            >Animoca Brands</a>
+            <div class="project__meta">Mergers & Acquisitions Intern</div>
+            <div class="project__meta">June - July 2023</div>
+          </li>
+          <li class="project rounded-md md:rounded-lg transition hover:bg-slate-50 hover:-translate-y-0.5">
+            <a
+            class="project__title hover:underline hover:text-slate-700"
+            href="https://www.starbucks.com/"
+            target="_blank"
+            rel="noreferrer"
+            >Starbucks Coffee</a>
+            <div class="project__meta">Barista</div>
+            <div class="project__meta">June - July 2022</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+<!-- The photo grid that shows off some wholesome memories of mine -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading">memories_</h2>
+    <div class="photo-grid">
+      <!-- img element, (src means source attribute), alternative text shown if the image can’t load and read by screen readers. -->
+      <img src="assets/studious.png" alt="Philip Meng and Abhay Gupta presenting a research poster for EnDive at EMNLP 2024">
+      <img src="assets/pitch.JPG" alt="Philip emceeing the inaugural Launchpad Pitch Day in spring 2024 with Sophia Tabibian and Sophie Liang">
+      <img src="assets/lp.png" alt="A screenshot of a Zoom meeting with the Launchpad Executive Board meeting during the summer, holding thumbs ups">
+      <img src="assets/phillipian.png" alt="A polaroid photo of The Phillipian newspaper's Business Section in spring 2024">
+      <img src="assets/friends.png" alt="A photo of Philip and his friends sitting together during a weekend in fall 2024.">
+      <img src="assets/first_asm.JPG" alt="tbd">
+      <img src="assets/davidson_smithsonian.png" alt="tbd">
+      <img src="assets/childhood_parents.JPG" alt="tbd">
+      <img src="assets/launchpad_merch.png" alt="tbd">
+      <img src="assets/hongkongreunion.png" alt="tbd">
+      <img src="assets/photo_w_bro.png" alt="tbd">
+      <img src="assets/spiritday.JPG" alt="tbd">
+      <img src="assets/foushee.PNG" alt="tbd">
+      <img src="assets/firstdayofschool.JPEG" alt="tbd">
+    </div>
+  </div>
+</section>
+</body>
+</html>

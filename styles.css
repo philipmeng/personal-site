@@ -1,0 +1,106 @@
+/* Root setup for CSS */
+/* This part helps me dfine CSS custom properties / variables for colors and layout (for WHOLE SITE) */
+:root { /* using root to match the documents root (html) */
+  --ink: #111;  /* primary text color */
+  --muted: #667085; /* secondary text color  */
+  --accent: #0a0a0a; /* accent color for the badge background later (and if I want other buttons)*/
+  --max: 1040px; /* maximum page width for the .container */
+  --pad: 20px; /* vertical padding between each section */
+}
+
+/* Universal CSS Selectors */
+/* Diff from root since that's to define css properties everywhere for html */
+/* While * targets every element on the page */
+* { box-sizing: border-box; }
+                                       /* smooths jumps and scrolling */
+html { background:#fff; color:var(--ink); scroll-behavior:smooth;
+      /* improves text / font on MacOS*/
+       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body {
+  margin:0;
+  /* selects font */
+  font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  line-height:1.75;
+  letter-spacing:0.005em;
+}
+/* this is called a pseudo-element (modern syntax); representing highlighted text */
+::selection { background:#000; color:#fff; }
+
+/* Layout */
+.container { max-width:var(--max); margin:0 auto; padding:0 24px; }
+.section { padding:var(--pad) 0; scroll-margin-top:24px; }
+.section-heading { font-size:20px; font-weight:700; margin:0 0 20px 0; }
+
+/*  Header */
+.site-header { padding-top:48px; }
+.title {
+  /* Clamp sets a fluid font size with min and max bounds (vw = percentage of viewport width so scales w/ screen size */
+  font-size:clamp(28px, 5vw, 40px); font-weight:700; margin:0;
+  /* Keeping it inline while letting it be a flex container */
+  display:inline-flex; align-items:center; gap:14px;
+} 
+.badge {
+  background:var(--accent); color:#fff; padding:6px 10px; border-radius:4px;
+  font-size:14px; font-weight:600;
+}
+
+/* Text blocks */
+/*  ch = a CSS size unit that equals the width of the character “0” in the current font */
+.text { max-width:62ch; }
+.text p { margin:0 0 20px 0; }
+.text a {
+  text-decoration: none;
+}
+.text a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+
+/* For each section  */
+.projects { list-style:none; margin:0; padding:0; }
+.project { padding:10px 0; } /* no borders */
+.project__title { text-decoration:none; color:var(--ink); font-weight:600; display:inline-block; }
+.project__title:hover { opacity:.75; }
+.project__meta { margin-top:4px; color:var(--muted); }
+
+/* Photo grid (w/ 5 images) */
+.photo-grid {
+  /* turns the wrapper into a CSS Grid layout */
+  display:grid;
+  /* create as many columns as will fit in the container at the minimum size (more columns on wide screens) */
+  /* minmax: each column can’t get narrower than 160px, but it can grow up to 1 fraction of the remaining space  */
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:16px;
+  align-items:start;
+}
+.photo-grid img {
+  /*  each img fits max width of box */
+  width:100%;
+  aspect-ratio: 3 / 4;
+  /* image fits the box; may crop slightly to fit  */
+  object-fit:cover;
+  /* rounded corners */
+  border-radius:12px;
+  /* provides some subtle depth through shadows */
+  box-shadow:0 8px 20px rgba(0,0,0,.10);
+  /* smooths the hover animation of movement and shadow over 2s */
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.photo-grid img:hover {
+  /* when hovering, lifts it slightly up */
+  transform:translateY(-2px);
+  /* adds more shadow to emphasise lift */
+  box-shadow:0 12px 28px rgba(0,0,0,.14);
+}
+/* makes experience better for ppl w/ smaller screens (makes it less gutter-heavy) */
+@media (max-width:640px) { .photo-grid { gap:12px; } }
+
+/*  Accessibility (to be more intentional + it's good practice */
+/*  respects users who’ve asked the OS to minimize motion  */
+/*  so disables smooth scrolling and hover animations for them, reducing nausea/vestibular issues */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  .photo-grid img { transition:none; }
+}
