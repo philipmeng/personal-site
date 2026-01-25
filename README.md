@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal portfolio website, a minimalist, CV-style site that showcases my projects, activities, and experiences.
 
-🔗 **Live Site:** https://philipmeng.github.io/personal-site  
+🔗 **Live Site:** https://philipmeng.com
 
 ---
 
