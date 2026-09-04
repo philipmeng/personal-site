@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This repository contains the source code for my personal portfolio website, a minimalist, CV-style site that showcases my projects, activities, and experiences.
+This repository contains the source code for my personal portfolio website, a minimalist, editorial-style site that showcases my projects, research, activities, and experiences.
 
 🔗 **Live Site:** https://philipmeng.com
 
@@ -27,9 +27,9 @@ At the end of the page, there is a photo grid of memories and moments that are p
 
 ## Tech Stack
 
-- **HTML5** for structure  
-- **CSS3** for custom styling and layout  
-- **Tailwind CSS (via CDN)** for utility-based styling  
+- **HTML5** for structure
+- **CSS3** for custom styling, responsive layout, and motion preferences
+- **DM Sans** for the site’s typography
 - Deployed with **GitHub Pages**
 
 ---
