@@ -153,8 +153,7 @@ a:focus-visible {
   list-style: none;
 }
 
-.compact-list time,
-.list-meta {
+.compact-list time {
   flex: 0 0 auto;
   color: var(--faint);
   font-size: 12px;
@@ -268,12 +267,6 @@ a:focus-visible {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
-}
-
-.writing-meta {
-  margin: 0;
-  color: var(--faint);
-  font-size: 13px;
 }
 
 .writing-body {
