@@ -277,6 +277,29 @@ a:focus-visible {
   margin: 0 0 20px;
 }
 
+.quote-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quote blockquote {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: clamp(21px, 3.5vw, 28px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.018em;
+}
+
+.quote cite {
+  display: block;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: normal;
+}
+
 @media (max-width: 680px) {
   .page-shell {
     padding: 38px 20px 24px;
