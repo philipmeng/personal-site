@@ -251,55 +251,6 @@ a:focus-visible {
   text-decoration-color: #aeb4bc;
 }
 
-.writing-header {
-  margin-bottom: 52px;
-}
-
-.back-link {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.writing-title {
-  margin: 12px 0 4px;
-  color: var(--ink-strong);
-  font-size: clamp(28px, 5vw, 38px);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-}
-
-.writing-body {
-  max-width: 62ch;
-}
-
-.writing-body p {
-  margin: 0 0 20px;
-}
-
-.quote-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.quote blockquote {
-  margin: 0;
-  color: var(--ink-strong);
-  font-size: clamp(21px, 3.5vw, 28px);
-  font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: -0.018em;
-}
-
-.quote cite {
-  display: block;
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
-  font-style: normal;
-}
-
 @media (max-width: 680px) {
   .page-shell {
     padding: 38px 20px 24px;
